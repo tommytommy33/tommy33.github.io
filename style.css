@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 20px;  /* Adds some space between the image and the heading */
+}
+
+.main-image {
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.yes-btn {
+  background-color: green;
+  color: white;
+}
+
+.no-btn {
+  background-color: red;
+  color: white;
+  position: relative;
+}
+
+/* Hover effect for the "Yes" button */
+.yes-btn:hover {
+  background-color: darkgreen;
+}
+
+/* Move the "No" button when hovered using CSS animations */
+.no-btn:hover {
+  animation: moveButton 1s infinite;
+}
+
+/* Keyframes to make the "No" button move randomly */
+@keyframes moveButton {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, -50px);
+  }
+  50% {
+    transform: translate(-150px, 100px);
+  }
+  75% {
+    transform: translate(200px, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
